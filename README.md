@@ -1,1 +1,1 @@
-# frontend-javascrip
+# frontend-javascript
