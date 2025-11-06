@@ -1,4 +1,5 @@
- // Building a Teacher interface
+
+ //  1. Building a Teacher interface
 interface Teacher {
     readonly firstName: string, // modifiable only after initialized
     readonly lastName: string, // modifiable only after initialized
@@ -32,7 +33,7 @@ const teacher4: Teacher = {
 
 console.log(teacher3);
 
-// Extending the Teacher class
+// 2. Extending the Teacher class
 interface Directors extends Teacher {
     numberOfReports: number // this extends the Teacher class for Directors objects created
 };
@@ -47,13 +48,13 @@ const director1: Directors = {
 };
 console.log(director1);
 
-// Printing teachers
+// 3. Printing teachers
  function printTeacher(firstName:string, lastName:string){
     return firstName.slice(0,1) + '.' +' '+ lastName // It returns the first letter of the firstName and the full lastName
  }
  console.log(printTeacher("John", "Doe")) 
  
-// Writing a class
+// 4. Writing a class
     // Interface for Constructor of the class
 interface StudentConstructor{
     new (firstName:string, lastName: string):StudentClassInterface;

@@ -1,4 +1,4 @@
-// Advanced types Part 1
+// 5. Advanced types Part 1
 
 // Director interface with methods
  interface DirectorInterface {
@@ -52,7 +52,8 @@ console.log(createEmployee(200)); // Teacher
 console.log(createEmployee(1000)); // Director
 console.log(createEmployee('$500')); // Director
 
-// Creating functions specific to employees
+
+// 6. Creating functions specific to employees
 
 // Type predicate
 function isDirector(employee: Director | Teacher): employee is Director{
@@ -70,3 +71,19 @@ function executeWork(employee: Director | Teacher): string{
 // Example 2
 console.log(executeWork(createEmployee(200))); // Getting to work
 console.log(executeWork(createEmployee(1000))); // Getting to director tasks
+
+
+// 7. String literal types 
+type Subjects = Math | History;
+
+function teachClass(todayClass: string){
+    if(todayClass === "Math"){
+        return "Teaching Math";
+    }else{
+        return "Teaching History";
+    }
+}
+
+// Example 3
+console.log(teachClass('Math')); // Teaching Math
+console.log(teachClass('History')); // Teaching History
