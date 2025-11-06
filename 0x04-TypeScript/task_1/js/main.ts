@@ -54,13 +54,12 @@ console.log(director1);
  console.log(printTeacher("John", "Doe")) 
  
 // Writing a class
-
-// Interface for Constructor of the class
+    // Interface for Constructor of the class
 interface StudentConstructor{
     new (firstName:string, lastName: string):StudentClassInterface;
 }
 
-// Interface for the class
+    // Interface for the class
 interface StudentClassInterface{
     workOnHomework():string;
     displayName():string;
@@ -82,7 +81,7 @@ class StudentClass implements StudentClassInterface{
     }
 }
 
-// Example 4
+    // Example 4
 const student1 = new StudentClass("Emmanuel", "Adi")
 console.log(student1.workOnHomework())
 console.log(student1.displayName())
