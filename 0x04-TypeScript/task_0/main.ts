@@ -21,6 +21,7 @@ const student2: Student = {
 
 const studentsList: Student[] = [student1, student2];
 
+// Using Vanilla JavaScript to render a table
 const table = document.createElement("table"); //Create a table
 const tableBody = document.createElement("tbody") //Make the part to hold the rows
 
