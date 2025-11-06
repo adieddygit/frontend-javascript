@@ -1,3 +1,4 @@
+ // Building a Teacher interface
 interface Teacher {
     readonly firstName: string, // modifiable only after initialized
     readonly lastName: string, // modifiable only after initialized
@@ -52,4 +53,36 @@ console.log(director1);
  }
  console.log(printTeacher("John", "Doe")) 
  
+// Writing a class
 
+// Interface for Constructor of the class
+interface StudentConstructor{
+    new (firstName:string, lastName: string):StudentClassInterface;
+}
+
+// Interface for the class
+interface StudentClassInterface{
+    workOnHomework():string;
+    displayName():string;
+}
+
+class StudentClass implements StudentClassInterface{
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string){
+        this.firstName = firstName,
+        this.lastName = lastName
+    }
+    workOnHomework():string{
+        return 'Currently working'
+    }
+    displayName():string{
+        return `Hello, my name is ${this.firstName}`
+    }
+}
+
+// Example 4
+const student1 = new StudentClass("Emmanuel", "Adi")
+console.log(student1.workOnHomework())
+console.log(student1.displayName())
