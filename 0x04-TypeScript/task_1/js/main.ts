@@ -31,16 +31,25 @@ const teacher4: Teacher = {
 
 console.log(teacher3);
 
+// Extending the Teacher class
 interface Directors extends Teacher {
     numberOfReports: number // this extends the Teacher class for Directors objects created
 };
 
 // Example 3
 const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
+  firstName: "John",
+  lastName: "Doe",
+  location: "London",
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
 console.log(director1);
+
+// Printing teachers
+ function printTeacher(firstName:string, lastName:string){
+    return firstName.slice(0,1) + '.' +' '+ lastName // It returns the first letter of the firstName and the full lastName
+ }
+ console.log(printTeacher("John", "Doe")) 
+ 
+
