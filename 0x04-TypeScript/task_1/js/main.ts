@@ -5,7 +5,7 @@ interface Teacher {
     yearsOfExperience?: number, // optional
     location: string,
     [key: string]: any; // For the posibility to add extra attributes
-}
+};
 
 // Example 1
 const teacher3: Teacher = {
@@ -16,11 +16,11 @@ const teacher3: Teacher = {
     contract: false, // this extra attribute was not listed above (no typed error)
 
     // NB: yearsOfExperience attribute was excluded but no typed error because it was set to optional (?)
-}
+};
 
 // Example 2
 const teacher4: Teacher = {
-  firstName: "James",
+  firstName: "John",
   lastName: "Agalga",
   fullTimeEmployee: true,
   yearsOfExperience: 5,
@@ -29,4 +29,18 @@ const teacher4: Teacher = {
   department: "Science" // another extra attribute
 };
 
-console.log(teacher3)
+console.log(teacher3);
+
+interface Directors extends Teacher {
+    numberOfReports: number // this extends the Teacher class for Directors objects created
+};
+
+// Example 3
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+console.log(director1);
