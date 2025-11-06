@@ -3,6 +3,6 @@ interface Teacher {
     lastName: string,
     fullTimeEmployee: boolean,
     yearsOfExperience: number,
-    location: string
+    location: string,
     contract: boolean
 }
