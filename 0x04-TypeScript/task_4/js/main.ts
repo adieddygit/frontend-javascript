@@ -1,8 +1,4 @@
-/// <reference path="./subjects/Cpp.ts" />
-/// <reference path="./subjects/Java.ts" />
-/// <reference path="./subjects/React.ts" />
-
-// Create and xport constants for each Subject
+// Create and export constants for each Subject
 export const cpp = new Subjects.Cpp();
 export const java = new Subjects.Java();
 export const react = new Subjects.React();
