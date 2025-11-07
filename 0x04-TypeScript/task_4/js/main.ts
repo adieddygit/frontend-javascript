@@ -1,3 +1,8 @@
+// Triple slash directive to connect .ts files with namespaces
+/// <reference path="./subjects/Cpp.ts" />
+/// <reference path="./subjects/Java.ts" />
+/// <reference path="./subjects/React.ts" />
+
 // Create and export constants for each Subject
 export const cpp = new Subjects.Cpp();
 export const java = new Subjects.Java();
