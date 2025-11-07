@@ -1,3 +1,5 @@
+// 8. Ambient Namespaces
+
 type RowID = number
 
 interface RowElement {
