@@ -71,19 +71,3 @@ function executeWork(employee: Director | Teacher): string{
 // Example 2
 console.log(executeWork(createEmployee(200))); // Getting to work
 console.log(executeWork(createEmployee(1000))); // Getting to director tasks
-
-
-// 7. String literal types 
-type Subjects = Math | History;
-
-function teachClass(todayClass: string){
-    if(todayClass === "Math"){
-        return "Teaching Math";
-    }else{
-        return "Teaching History";
-    }
-}
-
-// Example 3
-console.log(teachClass('Math')); // Teaching Math
-console.log(teachClass('History')); // Teaching History
